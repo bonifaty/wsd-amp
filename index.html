@@ -5,7 +5,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<style type="text/css">
+		.intro:after {
+			display: none;
+		}
+	</style>
 </head>
 <body class="shower list">
 
@@ -14,20 +19,33 @@
 		<p>Андрей Абрамов, Команда ВКонтакте</p>
 	</header>
 
-	<section class="slide">
-		<h2>WTF is AMP и почему шмель летает?</h2>
+	<section class="slide intro">
+		<div>
+            
+            <h2>WTF is AMP и почему шмель летает?</h2>
+            <img src="pictures/shmel.png" width="256" height="256">
+            <p>
+                Андрей Абрамов, <a href="https://vk.com/team" target="_blank">Команда ВКонтакте</a>
+                <br> Web Standards Days, Ноябрь 2017
+            </p>
+        </div>
+
+		
+	</section>
+
+	<!-- <section class="slide">
 		<ul>
 			<li>Вступление</li>
 			<li>Меня заинтересовал AMP</li>
 		</ul>
-	</section>
+	</section> -->
 
 	<section class="slide">
 		<h2>О чем поговорим</h2>
 		<ol>
 			<li>Что не так с мобильным вебом?</li>
-			<li>Технология AMP - мгновенная отрисовка страниц. Кому это нужно?</li>
-			<li>Практикум: Делаем AMP версию страницы</li>
+			<li>Технология AMP &mdash; мгновенная отрисовка страниц. Кому это нужно?</li>
+			<li>Практикум: Делаем AMP-версию страницы</li>
 			<li>Разбираем что у AMP под капотом</li>
 			<li>А если чего-то не хватает? Контрибьютим свой AMP-виджет</li>
 			<li>Что ждет технологию?</li>
@@ -35,28 +53,11 @@
 	</section>
 
 	<section class="slide">
-		<h2>При чем тут Шмель?</h2>
-		<p>В XX веке на заре самолетостроения не понимали, почему шмель не подчиняется известным законам аэродинамики.</p>
-	</section>
-
-	<section class="slide">
-		<img class="cover" src="pictures/bombus.jpg" alt="Bombus">
-	</section>
-
-	<section class="slide">
-		<h2>Всё дело в оптимизации</h2>
-		<p>Научная работа: Two Dimensional Mechanism for Insect Hovering</p>
-	</section>
-
-	<section class="slide">
-		<img class="cover" src="pictures/fly.gif" alt="Bombus">
-	</section>
-
-	<section class="slide">
 		<h2>Вопросы в зал</h2>
 		<ul>
 			<li>Кто поддерживает мобильные устройства на своем проекте?</li>
-			<li class="next">Кто любит мобильный Веб? Кто любит UX на мобильном?</li>
+			<li class="next">Кто любит мобильный веб?</li>
+			<li class="next">Кто любит UX на мобильном?</li>
 		</ul>
 	</section>
 
@@ -67,7 +68,7 @@
 	<section class="slide">
 		<h2>Пользователи эволюционировали в мобайл</h2>
 		<ul>
-			<li>2016 году Google объявила о планах Mobile-first индексации</li>
+			<li>2016 году Google объявила о планах mobile-first индексации</li>
 			<li>Мобильного трафика сегодня больше чем десктопа</li>
 		</ul>
 	</section>
@@ -80,11 +81,11 @@
 	<section class="slide">
 		<h2>Ну и мы не отстаем</h2>
 		<ul>
-			<li>Mobile-first css и Flexbox</li>
+			<li>Mobile-first CSS, флексбокс</li>
 			<li>Ретина</li>
 			<li>Изображения для разных размеров экранов</li>
-			<li>Tap вместо клика</li>
-			<li>UX рекоммендации</li>
+			<li>Тап вместо клика</li>
+			<li>UX-рекомендации</li>
 		</ul>
 	</section>
 
@@ -93,7 +94,7 @@
 	</section>
 
 	<section class="slide">
-		<h2 class="shout">Неа!</h2>
+		<h2 class="shout">Не-а!</h2>
 	</section>
 
 	<section class="slide">
@@ -102,22 +103,43 @@
 
 	<section class="slide">
 		<h2>Мобильный веб не дотягивает по UX</h2>
-		<p>
-			Среднее время загрузки ~ 17 секунд
-		</p>
-		<p>
-			Bounce rate - выше на мобильном, количество посещенных страниц - меньше.
-		</p>
+		<ul>
+			<li>Среднее время загрузки ~ 17 секунд</li>
+			<li>Bounce rate - выше на мобильном</li>
+			<li>Количество посещенных страниц - меньше</li>
+		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Пользователи страдают, но у них нет выбора</h2>
+		<h2>Пользователи страдают, Разработчики страдают</h2>
+		<ul>
+			<li>Мы страдаем - теряем пользователей</li>
+			<li>Теряем деньги</li>
+			<li>Мы в ловушке</li>
+		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Нас спасёт AMP!</h2>
-		<p>или нет?</p>
-		<p>ФОТО СУПЕРГЕРОЯ AMP</p>
+		<h2>Причём тут шмель?</h2>
+		<p>В XX веке на заре самолетостроения не понимали, почему шмель не подчиняется известным законам аэродинамики.</p>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/bombus.jpg" alt="Bombus">
+	</section>
+
+	<section class="slide">
+		<h2>Всё дело в оптимизации</h2>
+		<img src="pictures/fly.gif" alt="Bombus">
+		<p>Научная работа: <a href="https://www.researchgate.net/publication/12350611_Two_Dimensional_Mechanism_for_Insect_Hovering">Two Dimensional Mechanism for Insect Hovering</a></p>
+	</section>
+
+	<section class="slide">
+		<h2>А как быть нам?</h2>
+		<ul>
+			<li>Нас спасёт AMP!</li>
+			<li>или нет?</li>
+		</ul>
 	</section>
 
 	<section class="slide">
@@ -139,10 +161,6 @@
 	</section>
 
 	<section class="slide">
-		<h2>Демо AMP страницы</h2>
-	</section>
-
-	<section class="slide">
 		<h2>У кого уже есть?</h2>
 		<p>Собрать логотипы</p>
 		<ul>
@@ -152,16 +170,20 @@
 	</section>
 
 	<section class="slide">
+		<h2>Демо AMP-страницы</h2>
+	</section>
+
+	<section class="slide">
 		<h2>Кому может понадобится AMP?</h2>
 		<ul>
-			<li>Медиа паблишерам</li>
+			<li>Новостным сайтам</li>
 			<li class="next">eCommerce</li>
 			<li class="next">Всем</li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Какие были попытки до AMP быстро отдавать контент?</h2>
+		<h2>Какие были попытки?</h2>
 		<ul>
 			<li>Apple news</li>
 			<li>FB: Instant Articles https://instantarticles.fb.com/</li>
@@ -180,7 +202,7 @@
 
 	<section class="slide">
 		<h2>Что надо знать?</h2>
-		<p>HTML/CSS - никакого JavaScript</p>
+		<p>HTML и CSS, никакого JavaScript</p>
 	</section>
 
 	<section class="slide">
@@ -192,7 +214,8 @@
 		<h2>Правила игры AMP</h2>
 		<ul>
 			<li>Все стили на странице</li>
-			<li>Ура - нам не нужно писать JS, берем готовые компоненты</li>
+			<li>Ура - нам не нужно писать JS</li>
+			<li>Берём готовые компоненты</li>
 		</ul>
 	</section>
 
@@ -207,6 +230,7 @@
 
 	<section class="slide">
 		<h2>Ура - у нас есть AMP версия - публикуем!</h2>
+		<p>Что теперь?</p>
 	</section>
 
 	<section class="slide">
@@ -238,7 +262,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Critical rendering path</h2>
+		<h2>Критический путь отрисовки</h2>
 		<img src="pictures/render.png">
 	</section>
 
@@ -276,7 +300,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Опыт разработки AMP extension для VK</h2>
+		<h2>Опыт разработки расширения</h2>
 		<p>Как проходил процесс?</p>
 	</section>
 
@@ -313,7 +337,7 @@
 
 	<div class="progress"></div>
 
-	<script src="node_modules/shower-core/shower.min.js"></script>
+	<script src="shower/shower.min.js"></script>
 	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
 
 </body>
