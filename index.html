@@ -24,30 +24,28 @@
             
             <h2>WTF is AMP и почему шмель летает?</h2>
             <img src="pictures/shmel.png" width="256" height="256">
+            <!-- TODO: (заставить шмеля летать / парить) -->
             <p>
                 Андрей Абрамов, <a href="https://vk.com/team" target="_blank">Команда ВКонтакте</a>
                 <br> Web Standards Days, Ноябрь 2017
             </p>
-        </div>
-
-		
+        </div>		
 	</section>
 
 	<!-- <section class="slide">
-		<ul>
-			<li>Вступление</li>
-			<li>Меня заинтересовал AMP</li>
-		</ul>
+		<p>
+			Карта где я жил
+		</p>
 	</section> -->
 
 	<section class="slide">
 		<h2>О чем поговорим</h2>
 		<ol>
 			<li>Что не так с мобильным вебом?</li>
-			<li>Технология AMP &mdash; мгновенная отрисовка страниц. Кому это нужно?</li>
-			<li>Практикум: Делаем AMP-версию страницы</li>
-			<li>Разбираем что у AMP под капотом</li>
-			<li>А если чего-то не хватает? Контрибьютим свой AMP-виджет</li>
+			<li>Технология AMP &mdash; мгновенная отрисовка страниц</li>
+			<li>Практикум. Делаем AMP-версию страницы</li>
+			<li>Система AMP-компонентов</li>
+			<li>(?) Разбираем что у AMP под капотом</li>
 			<li>Что ждет технологию?</li>
 		</ol>
 	</section>
@@ -55,7 +53,7 @@
 	<section class="slide">
 		<h2>Вопросы в зал</h2>
 		<ul>
-			<li>Кто поддерживает мобильные устройства на своем проекте?</li>
+			<li class="next">У кого есть мобильная версия?</li>
 			<li class="next">Кто любит мобильный веб?</li>
 			<li class="next">Кто любит UX на мобильном?</li>
 		</ul>
@@ -67,22 +65,19 @@
 
 	<section class="slide">
 		<h2>Пользователи эволюционировали в мобайл</h2>
+		<!-- <h2>Смените мозг на мобильный</h2> -->
 		<ul>
-			<li>2016 году Google объявила о планах mobile-first индексации</li>
-			<li>Мобильного трафика сегодня больше чем десктопа</li>
+			<li class="next">Мобильного трафика сегодня больше чем десктопного</li>
+			<li class="next">2016 году Google объявила о планах <a href="https://webmasters.googleblog.com/2016/11/mobile-first-indexing.html">mobile-first индексации</a></li>
+			<li class="next">Уже с часов можно выходить в интернет</li>
+			<!-- <img src="pictures/evol.jpg"> -->
 		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Уже с часов можно выходить в интернет</h2> 
-		<!-- <p>И даже есть черновик спецификации для Media Queries "Насколько круглый экран"</p> -->
 	</section>
 
 	<section class="slide">
 		<h2>Ну и мы не отстаем</h2>
 		<ul>
 			<li>Mobile-first CSS, флексбокс</li>
-			<li>Ретина</li>
 			<li>Изображения для разных размеров экранов</li>
 			<li>Тап вместо клика</li>
 			<li>UX-рекомендации</li>
@@ -105,23 +100,18 @@
 		<h2>Мобильный веб не дотягивает по UX</h2>
 		<ul>
 			<li>Среднее время загрузки ~ 17 секунд</li>
-			<li>Bounce rate - выше на мобильном</li>
-			<li>Количество посещенных страниц - меньше</li>
+			<li>Bounce rate выше</li>
+			<li>Количество посещенных страниц меньше</li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Пользователи страдают, Разработчики страдают</h2>
-		<ul>
-			<li>Мы страдаем - теряем пользователей</li>
-			<li>Теряем деньги</li>
-			<li>Мы в ловушке</li>
-		</ul>
+		<h2 class="shout">У нас переходный возраст!</h2>
 	</section>
 
 	<section class="slide">
 		<h2>Причём тут шмель?</h2>
-		<p>В XX веке на заре самолетостроения не понимали, почему шмель не подчиняется известным законам аэродинамики.</p>
+		<p>В XX веке на заре самолетостроения долго не понимали, почему шмель не подчиняется известным законам аэродинамики.</p>
 	</section>
 
 	<section class="slide">
@@ -131,27 +121,23 @@
 	<section class="slide">
 		<h2>Всё дело в оптимизации</h2>
 		<img src="pictures/fly.gif" alt="Bombus">
+		<!-- TODO: (инвертировать видео насекомого) -->
 		<p>Научная работа: <a href="https://www.researchgate.net/publication/12350611_Two_Dimensional_Mechanism_for_Insect_Hovering">Two Dimensional Mechanism for Insect Hovering</a></p>
 	</section>
 
 	<section class="slide">
-		<h2>А как быть нам?</h2>
+		<h2>А что делать нам? Адаптироваться!</h2>
 		<ul>
 			<li>Нас спасёт AMP!</li>
-			<li>или нет?</li>
+			<li class="next">или нет?</li>
+			<li class="next">Кто слышал про AMP?</li>
+			<li class="next">Кто внедрял AMP?</li>
+			<!-- <p>TODO: Супергерой AMP</p> -->
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Вопросы в зал?</h2>
-		<ul>
-			<li>Кто слышал про AMP?</li>
-			<li>Кто внедрял AMP?</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>AMP = Accelerated Mobile Pages</h2>
+		<h2>AMP &mdash; Accelerated Mobile Pages</h2>
 		<p>Ускоренные мобильные страницы</p>
 		<img src="pictures/logo-blue.svg">
 	</section>
@@ -162,38 +148,34 @@
 
 	<section class="slide">
 		<h2>У кого уже есть?</h2>
-		<p>Собрать логотипы</p>
-		<ul>
-			<li>eBay</li>
-			<li>паблишеры</li>
-		</ul>
+		<!-- <p>TODO: Собрать логотипы</p> -->
 	</section>
 
 	<section class="slide">
-		<h2>Демо AMP-страницы</h2>
+		<!-- <h2>TODO: Видео поиска AMP (зацикленное)</h2> -->
 	</section>
 
 	<section class="slide">
-		<h2>Кому может понадобится AMP?</h2>
+		<h2>Кому стоит использовать AMP?</h2>
 		<ul>
-			<li>Новостным сайтам</li>
+			<li class="next">Новостным сайтам, блоггерам</li>
+			<li class="next">Корпоративным сайтам</li>
 			<li class="next">eCommerce</li>
-			<li class="next">Всем</li>
+			<li class="next">Всем!</li>
 		</ul>
 	</section>
 
 	<section class="slide">
 		<h2>Какие были попытки?</h2>
 		<ul>
-			<li>Apple news</li>
-			<li>FB: Instant Articles https://instantarticles.fb.com/</li>
-			<li>Telegram: Instant View https://instantview.telegram.org/</li>
+			<li><a href="https://developer.apple.com/news-publisher/">Apple News</a></li>
+			<li><a href="https://instantarticles.fb.com/">Facebook Instant Articles</a></li>
+			<li><a href="https://instantview.telegram.org/">Telegram Instant View</a></li>
 		</ul>
-		<p class="note">Больше информации!</p>
 	</section>
 
 	<section class="slide">
-		<h2>Окей, давайте еще один стандарт</h2>
+		<h2 class="shout">Окей, еще один стандарт?</h2>
 	</section>
 
 	<section class="slide">
@@ -202,63 +184,63 @@
 
 	<section class="slide">
 		<h2>Что надо знать?</h2>
-		<p>HTML и CSS, никакого JavaScript</p>
-	</section>
-
-	<section class="slide">
-		<h2>Интегрируемся</h2>
-		<img src="pictures/amp-html-page.png">
-	</section>
-
-	<section class="slide">
-		<h2>Правила игры AMP</h2>
 		<ul>
-			<li>Все стили на странице</li>
-			<li>Ура - нам не нужно писать JS</li>
+			<li>HTML и CSS, никакого JavaScript</li>
 			<li>Берём готовые компоненты</li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>ПРАКТИКУМ: Давайте сделаем AMP страницу</h2>
-		<p>Я взял сложный пример страницы и попытался перевести его в формат AMP</p>
-	</section>
-
-	<!-- <section class="slide">
-		<h2>Как я представлял этапы работы</h2>
-	</section> -->
-
-	<section class="slide">
-		<h2>Ура - у нас есть AMP версия - публикуем!</h2>
-		<p>Что теперь?</p>
+		<h2>AMP страница изнутри</h2>
+		<img src="pictures/amp-html-page.png">
 	</section>
 
 	<section class="slide">
-		<img class="cover" src="pictures/money.jpg">
+		<h2>Практикум. Давайте сделаем AMP страницу</h2>
+		<!-- TODO: видео страницы -->
 	</section>
 
 	<section class="slide">
-		<h2>Ну и как это было?</h2>
+		<h2>Какие компоненты нам понадобятся?</h2>
+
 		<ul>
-			<li>Так ли просто сделать?</li>
-			<li>Чего мы лишаемся?</li>
-			<li>А что хорошо? (монетизация / аналитика)</li>
+			<li>amp-form</li>
+			<li>amp-carousel</li>
+			<li>amp-iframe</li>
+			<li>amp-sidebar</li>
+			<li>amp-accordeon</li>
+			<li>amp-ad</li>
+			<li>amp-analytics</li>
 		</ul>
-	</section>	
+	</section>
+
+	<section class="slide">
+		<!-- TODO: Скриншоты  -->
+	</section>
+
+	<section class="slide">
+		<h2>Что дальше?</h2>
+		<ul>
+			<li>Валидируем (как?)</li>
+			<li></li>
+		</ul>
+	</section>
 
 	<section class="slide">
 		<h2>Инструменты для разработки (больше информации!)</h2>
-		<p>postcss amp plugin</p>
-		<p>AMP validator</p>
+		<ul>
+			<li><a href="https://github.com/tinovyatkin/postcss-amp">PostCSS AMP plugin</a></li>
+			<li><a href="https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en">AMP Chrome extension</a></li>
+		</ul>
 	</section>
 
 	<section class="slide">
 		<h2>У меня WordPress</h2>
-		<p>Вам сюда: https://wordpress.org/plugins/amp/</p>
+		<p>Вам <a href="https://wordpress.org/plugins/amp/">сюда</a></p>
 	</section>
 
 	<section class="slide">
-		<h2>Посмотрим как оно устроено внутри</h2>
+		<h2>Что там такого быстрого?</h2>
 	</section>
 
 	<section class="slide">
