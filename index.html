@@ -22,6 +22,10 @@
 			}
 		}
 
+		.slide:after {
+			background-image: url(../pictures/ribbon.svg);
+		}
+
 		.intro:after {
 			display: none;
 		}
@@ -77,21 +81,22 @@
 	</section>
 
 	<section class="slide">
-		<h2>Мы эволюционировали</h2>
+		<h2>Пользователи эволюционировали</h2>
 		<ul>
-			<li class="next">Мобильного трафика сегодня больше чем десктопного</li>
-			<li class="next">В 2016 году Google объявил о планах <a href="https://webmasters.googleblog.com/2016/11/mobile-first-indexing.html">mobile-first индексации</a></li>
-			<img src="pictures/evol.jpg">
+			<li>Мобильного трафика сегодня больше чем десктопного</li>
+			<li>В 2016 году Google объявил о планах <a href="https://webmasters.googleblog.com/2016/11/mobile-first-indexing.html">mobile-first индексации</a></li>
 		</ul>
+		<img width="500" style="margin-bottom: 40px; margin-right: 70px;" class="place bottom right" src="pictures/evol.jpg">
 	</section>
 
 	<section class="slide">
 		<h2>Ну и мы не отстаем</h2>
 		<ul>
-			<li>Mobile-first CSS, флексбокс</li>
-			<li>Изображения для разных размеров экранов</li>
-			<li>Тап вместо клика</li>
-			<li>UX-рекомендации</li>
+			<li class="next">UX-рекомендации</li>
+			<li class="next">Mobile-first CSS, флексбокс</li>
+			<li class="next">Изображения для разных размеров экранов</li>
+			<li class="next">Тап вместо клика</li>
+			<li class="next">SVG</li>
 		</ul>
 	</section>
 
@@ -117,40 +122,32 @@
 	</section>
 
 	<section class="slide">
-		<h2 class="shout">У нас переходный возраст!</h2>
+		<h2 class="shout">У нас <br>переходный <br>возраст!</h2>
 	</section>
 
 	<section class="slide">
-		<h2>Причём тут шмель?</h2>
-		<p>В XX веке на заре самолетостроения долго не понимали, почему шмель не подчиняется известным законам аэродинамики.</p>
-	</section>
-
-	<section class="slide">
-		<img class="cover" src="pictures/bombus2.jpg" alt="Bombus">
+		<h2 style="color: white; text-align: center;">Причём тут шмель?</h2>
+		<!-- <p style="color: white;">В XX веке на заре самолетостроения долго не понимали, почему шмель не подчиняется известным законам аэродинамики.</p> -->
+		<img class="cover" src="pictures/bombus3.jpg" alt="Bombus">
 	</section>
 
 	<section class="slide">
 		<h2>Всё дело в оптимизации</h2>
-		<img src="pictures/fly.gif" alt="Bombus">
-		<!-- TODO: (инвертировать видео насекомого) -->
-		<p>Научная работа: <a href="https://www.researchgate.net/publication/12350611_Two_Dimensional_Mechanism_for_Insect_Hovering">Two Dimensional Mechanism for Insect Hovering</a></p>
+		<video style="margin-top: 20px;" src="pictures/fly.mp4" autoplay="autoplay" loop width="500"></video>
+		<p><a href="https://www.researchgate.net/publication/12350611_Two_Dimensional_Mechanism_for_Insect_Hovering">Two Dimensional Mechanism for Insect Hovering</a></p>
 	</section>
+
+
 
 	<section class="slide">
 		<h2>А что делать нам? Адаптироваться!</h2>
+		<p class="next">AMP &mdash; Accelerated Mobile Pages (Ускоренные мобильные страницы)</p>
 		<ul>
-			<li>Нас спасёт AMP!</li>
-			<li class="next">или нет?</li>
 			<li class="next">Кто слышал про AMP?</li>
 			<li class="next">Кто внедрял AMP?</li>
-			<!-- <p>TODO: Супергерой AMP</p> -->
 		</ul>
-	</section>
 
-	<section class="slide">
-		<h2>AMP &mdash; Accelerated Mobile Pages</h2>
-		<p>Ускоренные мобильные страницы</p>
-		<img src="pictures/logo-blue.svg">
+		<img class="next" style="margin-top: 30px;" width="300" src="pictures/logo-blue.svg" alt="Hero">
 	</section>
 
 	<section class="slide">
@@ -159,18 +156,17 @@
 
 	<section class="slide">
 		<h2>У кого уже есть?</h2>
-		<!-- <p>TODO: Собрать логотипы</p> -->
+		<img class="cover" src="pictures/logos.jpg" alt="Logos">
 	</section>
 
 	<section class="slide">
-		<!-- <h2>TODO: Видео поиска AMP (зацикленное)</h2> -->
+		<video class="cover" src="pictures/search.mp4" onclick="this.play()" loop></video>
 	</section>
 
 	<section class="slide">
-		<h2>Кому стоит использовать AMP?</h2>
+		<h2>Кому нужны быстрые сайты?</h2>
 		<ul>
-			<li class="next">Новостным сайтам, блоггерам</li>
-			<li class="next">Корпоративным сайтам</li>
+			<li class="next">Новостные платформы</li>
 			<li class="next">eCommerce</li>
 			<li class="next">Всем!</li>
 		</ul>
@@ -238,7 +234,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Инструменты для разработки (больше информации!)</h2>
+		<h2>Инструменты для разработки</h2>
 		<ul>
 			<li><a href="https://github.com/tinovyatkin/postcss-amp">PostCSS AMP plugin</a></li>
 			<li><a href="https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en">AMP Chrome extension</a></li>
@@ -298,27 +294,34 @@
 		<img src="pictures/google.png" alt="Google" width="100%">
 	</section>
 
+	
+
 	<section class="slide">
-		<h2 class="shout">Выводы</h2>
+		<h2 class="shout">Что мы <br>получили?</h2>
 	</section>
 
 	<section class="slide">
-		<h2>Что делать? Бежать реализовывать?</h2>
+		<img class="cover" src="pictures/plum.jpg">
 	</section>
 
 	<section class="slide">
-		<h2>Что мы получили?</h2>
-		<img src="pictures/plum.jpg" width="100%">
+		<h2>Выводы</h2>
+		<ul>
+			<li>Работает быстро</li>
+			<li>Можно подглядеть как устроено</li>
+			<li>Бежать реализовывать</li>
+			<li>Открытая технология</li>
+		</ul>
 	</section>
 
-	<section class="slide">
+	<!-- <section class="slide">
 		<h2>Что ждет AMP</h2>
 		<p>Свободное размышление</p>
 		<ul>
 			<li>Можно и desktop сайты делать</li>
 			<li>Уже есть eCommerce checkout</li>
 		</ul>
-	</section>
+	</section> -->
 
 	<footer class="badge">
 		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
