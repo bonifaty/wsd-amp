@@ -193,58 +193,61 @@
 		<h2>Что надо знать?</h2>
 		<ul>
 			<li>HTML и CSS, никакого JavaScript</li>
-			<li>Берём готовые компоненты</li>
+			<li>Читаем документацию <a href="https://www.ampproject.org/docs/getting-started/">https://www.ampproject.org/</a></li>
+			<li>Берём готовые компоненты <a href="https://ampbyexample.com/">https://ampbyexample.com/</a></li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>AMP страница изнутри</h2>
-		<img src="pictures/amp-html-page.png">
+		<h2>Код AMP страницы</h2>
+		<pre>                
+			<code>&lt;html <mark class="important">amp</mark> lang="en"&gt;</code>
+			<code>...</code>
+			<code>&lt;script async src=<mark>&quot;https://cdn.ampproject.org/v0.js&quot;</mark>&gt;</code>
+			<code>...</code>
+			<code>&lt;h1&gt;Наш контент&lt;/h1&gt;</code>
+			<code>&lt;amp-img src=&quot;images/picture.jpg&quot;
+  width=&quot;900&quot; height=&quot;508&quot; layout=&quot;responsive&quot;&gt;&lt;/amp-img&gt;</code>
+
+            
+	    </pre>
 	</section>
 
 	<section class="slide">
 		<h2>Практикум. Давайте сделаем AMP страницу</h2>
 		<!-- TODO: видео страницы -->
-	</section>
-
-	<section class="slide">
-		<h2>Какие компоненты нам понадобятся?</h2>
-
 		<ul>
 			<li>amp-form</li>
 			<li>amp-carousel</li>
 			<li>amp-iframe</li>
 			<li>amp-sidebar</li>
 			<li>amp-accordeon</li>
-			<li>amp-ad</li>
-			<li>amp-analytics</li>
 		</ul>
 	</section>
+	<!-- <section class="slide">
+		TODO: Скриншоты 
+	</section> -->
 
-	<section class="slide">
-		<!-- TODO: Скриншоты  -->
-	</section>
-
-	<section class="slide">
+	<!-- <section class="slide">
 		<h2>Что дальше?</h2>
 		<ul>
 			<li>Валидируем (как?)</li>
 			<li></li>
 		</ul>
-	</section>
+	</section> -->
 
 	<section class="slide">
 		<h2>Инструменты для разработки</h2>
 		<ul>
-			<li><a href="https://github.com/tinovyatkin/postcss-amp">PostCSS AMP plugin</a></li>
-			<li><a href="https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en">AMP Chrome extension</a></li>
+			<li>PostCSS <a href="https://github.com/tinovyatkin/postcss-amp">AMP plugin</a></li>
+			<li><a href="https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en">AMP Validator</a> - расширение для хрома</li>
+			<li>А если у меня WordPress? <a href="https://wordpress.org/plugins/amp/">Есть плагин</a></li>
 		</ul>
-		<p class="note next"><a href="https://wordpress.org/plugins/amp/">А если у меня WordPress?</a></p>
 	</section>
 
-	<section class="slide">
+	<!-- <section class="slide">
 		<h2>Что там такого быстрого?</h2>
-	</section>
+	</section> -->
 
 	<section class="slide">
 		<h2>Критический путь отрисовки</h2>
@@ -260,14 +263,11 @@
 	</section> -->
 
 	<section class="slide">
-		<h2>Почему у AMP все быстро?</h2>
+		<h2>Почему у AMP-шмель летает?</h2>
 		<ul>
 			<li>Асинхронный JavaScript</li>
-			<li>Рсположение элементов предопределено</li>
-			<li>Сторонний JavaScript запускается в iframe</li>
-			<li>CSS выдаем инлайном</li>
-			<li>Ничего не останавливает браузер от рендеринга (ну если только вы подключаете шрифты)</li>
-			<li>Lazy-load ресурсов (Viewport)</li>
+			<li>Inline CSS</li>
+			<li>Ленивая инициализация компонентов</li>
 			<li>Prerendering при поиске в Google</li>
 			<li>Кэширование</li>
 		</ul>
@@ -279,25 +279,42 @@
 	</section> -->
 
 	<section class="slide">
-		<h2>Не нравится - Расширяем AMP</h2>
-		<p>Система AMP компонентов и экстеншенов</p>
+		<h2>Система AMP компонентов</h2>
+
 		<a href="https://ampbyexample.com/">https://ampbyexample.com/</a>
+		<img src="pictures/ampcomps.png" class="place bottom" width="100%">
 	</section>
+
+	<!-- <section class="slide">
+		<h2>/h2>
+		<p>Как проходил процесс?</p>
+	</section> -->
 
 	<section class="slide">
 		<h2>Опыт разработки расширения</h2>
-		<p>Как проходил процесс?</p>
+		<ul>
+			<li>AMP &mdash; открытое сообщество <a href="https://github.com/ampproject">https://github.com/ampproject</a></li>
+			<li>Можно написать в <a href="https://amphtml.slack.com/">Slack</a></li>
+			<li>Можно даже позвонить</li>
+		</ul>
+		<img src="pictures/google.jpg" alt="Google" width="500" class="place bottom right">
 	</section>
 
 	<section class="slide">
-		<h2>Позвонил в Google</h2>
-		<img src="pictures/google.png" alt="Google" width="100%">
+		<h2>Расширение AMP-VK</h2>
+
+		<p>У ВКонтакте теперь есть embed-виджет <br><mark>&lt;amp-vk&gt;</mark>, который позволяет встраивать <br> VK&nbsp;<a href="https://vk.com/dev/widget_post">посты</a> и <a href="https://vk.com/dev/widget_poll">виджеты опросов</a></p>
+
+		<img width="350" style="margin-right: 40px;" class="place right" src="pictures/vk-amp.png">
 	</section>
 
-	
-
 	<section class="slide">
-		<h2 class="shout">Что мы <br>получили?</h2>
+		<h2>Что мы получили?</h2>
+		<ul>
+			<li>&laquo;Починили&raquo; мобильный веб</li>
+			<li>Временный костыль для переходного возраста</li>
+			<li>Лучшие практики оптимизации</li>
+		</ul>
 	</section>
 
 	<section class="slide">
@@ -305,13 +322,12 @@
 	</section>
 
 	<section class="slide">
-		<h2>Выводы</h2>
-		<ul>
-			<li>Работает быстро</li>
-			<li>Можно подглядеть как устроено</li>
-			<li>Бежать реализовывать</li>
-			<li>Открытая технология</li>
-		</ul>
+		<h2 class="shout">Спасибо за внимание!</h2>
+		<img width="200" src="pictures/bee2.jpg" class="place top left">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Вопросы?</h2>
 	</section>
 
 	<!-- <section class="slide">
