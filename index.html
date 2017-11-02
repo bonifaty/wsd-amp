@@ -7,8 +7,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
 	<style type="text/css">
+		@keyframes -shmel-hover {
+			0% {
+				transform: translate3d(0, 0, 0);
+				animation-timing-function:  ease-out;
+			}
+			50% {
+				transform: translate3d(0, -15px, 0);
+				animation-timing-function:  ease-in;
+			}
+			100% {
+				transform: translate3d(0, 0, 0);
+				animation-timing-function:  ease-out;
+			}
+		}
+
 		.intro:after {
 			display: none;
+		}
+
+		.shmel {
+			animation: -shmel-hover 1.5s infinite;
+			margin-top: -30px;
+			margin-bottom: 30px;
 		}
 	</style>
 </head>
@@ -21,10 +42,8 @@
 
 	<section class="slide intro">
 		<div>
-            
+            <img class="shmel" src="pictures/shmel.png" width="256" height="256">
             <h2>WTF is AMP и почему шмель летает?</h2>
-            <img src="pictures/shmel.png" width="256" height="256">
-            <!-- TODO: (заставить шмеля летать / парить) -->
             <p>
                 Андрей Абрамов, <a href="https://vk.com/team" target="_blank">Команда ВКонтакте</a>
                 <br> Web Standards Days, Ноябрь 2017
@@ -32,21 +51,15 @@
         </div>		
 	</section>
 
-	<!-- <section class="slide">
-		<p>
-			Карта где я жил
-		</p>
-	</section> -->
-
 	<section class="slide">
 		<h2>О чем поговорим</h2>
 		<ol>
-			<li>Что не так с мобильным вебом?</li>
-			<li>Технология AMP &mdash; мгновенная отрисовка страниц</li>
-			<li>Практикум. Делаем AMP-версию страницы</li>
-			<li>Система AMP-компонентов</li>
-			<li>(?) Разбираем что у AMP под капотом</li>
-			<li>Что ждет технологию?</li>
+			<li class="next">Что не так с мобильным вебом?</li>
+			<li class="next">AMP &mdash; мгновенная отрисовка страниц</li>
+			<li class="next">Практикум. Делаем AMP-версию страницы</li>
+			<li class="next">Система AMP-компонентов</li>
+			<li class="next">Почему AMP такой быстрый?</li>
+			<li class="next">Что ждёт технологию?</li>
 		</ol>
 	</section>
 
@@ -64,13 +77,11 @@
 	</section>
 
 	<section class="slide">
-		<h2>Пользователи эволюционировали в мобайл</h2>
-		<!-- <h2>Смените мозг на мобильный</h2> -->
+		<h2>Мы эволюционировали</h2>
 		<ul>
 			<li class="next">Мобильного трафика сегодня больше чем десктопного</li>
-			<li class="next">2016 году Google объявила о планах <a href="https://webmasters.googleblog.com/2016/11/mobile-first-indexing.html">mobile-first индексации</a></li>
-			<li class="next">Уже с часов можно выходить в интернет</li>
-			<!-- <img src="pictures/evol.jpg"> -->
+			<li class="next">В 2016 году Google объявил о планах <a href="https://webmasters.googleblog.com/2016/11/mobile-first-indexing.html">mobile-first индексации</a></li>
+			<img src="pictures/evol.jpg">
 		</ul>
 	</section>
 
@@ -115,7 +126,7 @@
 	</section>
 
 	<section class="slide">
-		<img class="cover" src="pictures/bombus.jpg" alt="Bombus">
+		<img class="cover" src="pictures/bombus2.jpg" alt="Bombus">
 	</section>
 
 	<section class="slide">
@@ -232,11 +243,7 @@
 			<li><a href="https://github.com/tinovyatkin/postcss-amp">PostCSS AMP plugin</a></li>
 			<li><a href="https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en">AMP Chrome extension</a></li>
 		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>У меня WordPress</h2>
-		<p>Вам <a href="https://wordpress.org/plugins/amp/">сюда</a></p>
+		<p class="note next"><a href="https://wordpress.org/plugins/amp/">А если у меня WordPress?</a></p>
 	</section>
 
 	<section class="slide">
