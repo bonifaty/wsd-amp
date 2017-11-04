@@ -200,25 +200,26 @@
 		<h2>AMP страница</h2>
 		<pre>                
 			<code>&lt;html <mark class="important">amp</mark> lang="en"&gt;</code>
-			<code>...</code>
-			<code>&lt;link <mark>rel=&quot;canonical&quot;</mark> href=&quot;https://regular.com/version&quot;&gt;</code>
-			<code>&lt;script async src=<mark>&quot;https://cdn.ampproject.org/v0.js&quot;</mark>&gt;</code>
-			<code></code>
-			<code>...</code>
-			<code>&lt;h1&gt;Наш контент&lt;/h1&gt;</code>
-			<code><mark>&lt;amp-img</mark> src=&quot;images/picture.jpg&quot;
-  width=&quot;900&quot; height=&quot;508&quot; layout=&quot;responsive&quot;&gt;&lt;/amp-img&gt;</code>
+			<code>&lt;head&gt;</code>
+			<code>  ...</code>
+			<code>  &lt;link <mark>rel=&quot;canonical&quot;</mark> href=&quot;https://regular.com/version&quot;&gt;</code>
+			
+			<code>  &lt;style amp-custom&gt; .logo {color: green;} &lt;/style&gt;</code>
+			<code>  ...</code>
+			<code>  &lt;script async src=<mark>&quot;https://cdn.ampproject.org/v0.js&quot;</mark>&gt;</code>
 	    </pre>
 	</section>
 
 	<section class="slide">
 		<h2>AMP страница</h2>
-		<ul>
-			<li>Стили инлайним в <mark>&lt;head&gt;</mark></li>
-			<li>Подключаем amp-компоненты</li>
-		</ul>
 		<pre>                
-			<code>&lt;html <mark class="important">amp</mark> lang="en"&gt;</code>
+			<code>...</code>
+			<code>&lt;body&gt;</code>
+			<code>  &lt;h1&gt;Наш контент&lt;/h1&gt;</code>
+			<code>  <mark>&lt;amp-img</mark> src=&quot;images/picture.jpg&quot; layout=&quot;responsive&quot;&gt;</code>
+  			<code>    width=&quot;900&quot;</code>
+  			<code>    height=&quot;508&quot;</code>
+  			<code>  &lt;/amp-img&gt;</code>
 		</pre>
 	</section>
 
@@ -238,11 +239,18 @@
 		</ul>
 	</section>
 
-	<!-- TO REVIEW! -->
 	<section class="slide">
 		<h2>Расширение AMP-VK</h2>
 
-		<p>У ВКонтакте теперь есть embed-виджет <br><mark>&lt;amp-vk&gt;</mark>, который позволяет встраивать <br> VK&nbsp;<a href="https://vk.com/dev/widget_post">посты</a> и <a href="https://vk.com/dev/widget_poll">виджеты опросов</a></p>
+		<p>У ВКонтакте теперь есть embed-виджет <br><mark>&lt;amp-vk&gt;</mark>для <a href="https://vk.com/dev/widget_post">постов</a> и <a href="https://vk.com/dev/widget_poll">опросов</a></p>
+
+		<pre>                
+			<code>&lt;amp-vk</mark> ...&gt;</code>
+  			<code>    data-embedtype=&quot;post&quot;</code>
+  			<code>    data-owner-id=&quot;1&quot;</code>
+  			<code>    data-post-id=&quot;45616&quot;</code>
+  			<code>    data-hash=&quot;Yc8_Z9pnpg8...&quot;</code>
+		</pre>
 
 		<img width="350" style="margin-right: 40px;" class="place right" src="pictures/vk-amp.png">
 	</section>
@@ -252,12 +260,10 @@
 		<ul>
 			<li>AMP &mdash; открытое сообщество <a href="https://github.com/ampproject">https://github.com/ampproject</a></li>
 			<li>Можно написать в <a href="https://amphtml.slack.com/">Slack</a></li>
-			<li>Можно даже позвонить</li>
+			<li>Еженедельные встречи с контрибьюторами</li>
 		</ul>
-		<img src="pictures/google.jpg" alt="Google" width="500" class="place bottom right">
+		<img src="pictures/google.jpg" alt="Google" width="400" class="">
 	</section>
-
-	<!-- /TO REVIEW! -->
 
 	<section class="slide">
 		<h2 class="shout">Почему <span style="white-space: nowrap;">AMP-шмель</span> летает?</h2>
@@ -271,11 +277,11 @@
 	<section class="slide">
 		<h2>Оптимизация отрисовки</h2>
 		<ul>
-			<li>Кэширование</li>
 			<li>Inline CSS</li>
-			<li>Prerendering при поиске в Google</li>
-			<li>JS компоненты через <mark>script async</mark></li>
+			<li>JS компоненты через &lt;script <mark>async</mark> ...&gt;</li>
 			<li>Ленивая загрузка ресурсов</li>
+			<li>Кэширование</li>
+			<li>Prerendering при поиске в Google</li>
 		</ul>
 	</section>
 
@@ -304,7 +310,11 @@
 	</section>
 
 	<section class="slide">
-		<h2>Отдай страницу меньше чем за 100 мс</h2>
+		<h2>Отдай страницу</h2>
+		<ul>
+			<li>На мобильном интернете задержка 100-200 мс</li>
+			<li class="next">Нам нужно отдать страницу с сервера &lt; 100 мс</li>
+		</ul>
 	</section>
 
 	<section class="slide">
