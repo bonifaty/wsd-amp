@@ -231,15 +231,6 @@
 	</section>
 
 	<section class="slide">
-		<h2>Инструменты для разработки</h2>
-		<ul>
-			<li>PostCSS <a href="https://github.com/tinovyatkin/postcss-amp">AMP plugin</a></li>
-			<li><a href="https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en">AMP Validator</a> - расширение для хрома</li>
-			<li>А если у меня WordPress? <a href="https://wordpress.org/plugins/amp/">Есть плагин</a></li>
-		</ul>
-	</section>
-
-	<section class="slide">
 		<h2>Расширение AMP-VK</h2>
 
 		<p>У ВКонтакте теперь есть embed-виджет <br><mark>&lt;amp-vk&gt;</mark>для <a href="https://vk.com/dev/widget_post">постов</a> и <a href="https://vk.com/dev/widget_poll">опросов</a></p>
@@ -263,6 +254,15 @@
 			<li>Еженедельные встречи с контрибьюторами</li>
 		</ul>
 		<img src="pictures/google.jpg" alt="Google" width="400" class="">
+	</section>
+
+	<section class="slide">
+		<h2>Инструменты для разработки</h2>
+		<ul>
+			<li>PostCSS <a href="https://github.com/tinovyatkin/postcss-amp">AMP plugin</a></li>
+			<li><a href="https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en">AMP Validator</a> - расширение для хрома</li>
+			<li>А если у меня WordPress? <a href="https://wordpress.org/plugins/amp/">Есть плагин</a></li>
+		</ul>
 	</section>
 
 	<section class="slide">
@@ -306,28 +306,37 @@
 	</section>
 
 	<section class="slide">
-		<h2 class="shout">Mobile best practices</h2>
+		<h2 class="shout">Mobile performance</h2>
 	</section>
 
 	<section class="slide">
 		<h2>Отдай страницу</h2>
 		<ul>
-			<li>На мобильном интернете задержка 100-200 мс</li>
-			<li class="next">Нам нужно отдать страницу с сервера &lt; 100 мс</li>
+			<li class="next">На мобильных сетях задержка 100-200 мс</li>
+			<li class="next">Нужно отдать страницу с сервера как можно быстрее &lt; 100 мс</li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Critical CSS / Inline CSS</h2>
+		<h2>Critical CSS</h2>
+		<ul>
+			<li >Инлайном отдаются стили для первого экрана</li>
+			<li >Асинронно догружаем стили для оставшейся страницы</li>
+		</ul>
+		<img width="200" style="margin-top: 20px; margin-left: -30px" src="pictures/critical.jpg">
 	</section>
 
 	<section class="slide">
-		<h2>Поменьше шрифтов!</h2>
+		<h2>Поменьше шрифтов</h2>
+		<ul>
+			<li>Браузер начинает подгружать шрифты прямо перед рендерингом</li>
+			<li>Chrome ждёт загрузку шрифтов 3 секунды, Safari ждёт вечность</li>
+			<li>Может можно без сторонних шрифтов? <br> <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">Using UI System Fonts In Web Design</a></li>
+		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Ленивая инициализация компонентов</h2>
-		<p>JS async и т.д.</p>
+		<h2 class="shout">Ленись!</h2>
 	</section>
 
 	<section class="slide">
